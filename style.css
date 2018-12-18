@@ -1,0 +1,90 @@
+body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.header {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 24px;
+    color: slategray;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0 2px 4px 1px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-left: 20px;
+    padding-top: 10px;
+    vertical-align: middle;
+    overflow: hidden;
+
+}
+
+.logo {
+    position: relative;
+}
+
+.main {
+    min-height: 400px;
+    height: 70vh;
+    position: relative;
+    padding-top: 61px;
+    padding-bottom: 5px;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.contents {
+    background-color: white;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 85%;
+    margin: 0 auto;
+    flex-grow: 0;
+}
+
+.navigation {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 24px;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    width: 400px;
+    height: 100%;
+    float: right;
+    margin-right: 4%;
+    margin-top: 5px;
+
+}
+
+.navigation-div {
+    margin: 0;
+    width: 100px;
+    height: 100%;
+    float: right;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.navigation-div a{
+
+    text-decoration: none;
+    font-size: 20px;
+  
+    color: black;
+   /* background-color: #2e2e2e;*/
+    top: 10px;
+    padding-bottom: 9px;
+  }
+
+.navigation-div a:hover {
+    color: #808080;
+      text-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
+    }
