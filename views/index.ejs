@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset = "utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "assets/style.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Dormeter | Home</title>
+  </head>
+  <body>
+<!------------Navigation Bar---------------->
+<% include partials/nav.ejs %>
+<!-------------Content------------------->
+    <div class = "content-set">
+      <table>
+        <tr>
+          <td>
+            <h1>Welcome To Dormeter</h1>
+            <br/>
+            <p>Dormeter is a site dedicated to providing students
+              with information and reviews on prospective dorms, provided by other students.
+              A site made by students for students!</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+<!------------Redirection--------------->
+  <form id = "index-buttons" method = "POST" action = "/contact">
+    <input type = "button" value = "Find a Dorm">
+    <input type = "button" value = "Search for a Dorm">
+  </form>
+<!--------------------------------------->
+  </body>
+</html>

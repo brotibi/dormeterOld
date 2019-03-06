@@ -1,0 +1,151 @@
+body {
+  background-color: #262626;
+  color: black;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+table {
+  visibility: visible;
+}
+
+ul, li{
+    list-style:none;
+    list-style-type:none;
+    display: inline-block;
+    margin-right: 10vw;
+    vertical-align: middle;
+    margin-top: auto;
+    float: inherit;
+}
+/***********Navigation Bar**************/
+.nav-bar {
+  background-color: turquoise;
+  font-size: 25px;
+  box-shadow: 0px 1px black;
+  width: 100vw;
+  position: fixed;
+  margin-top: -10px;
+  margin-left: -8px;
+  text-decoration: none;
+  height: 60px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  text-shadow: 2px 2px black;
+  color: purple;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 20px;
+}
+.nav-bar input{
+  float: left;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-bar input[type=text] {
+  float: left;
+  padding: 6px;
+  margin-top: 4px;
+  margin-right: -8px;
+  border: none;
+  font-size: 17px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 40px;
+  width: 270px;
+}
+
+.nav-bar input[type=submit]  {
+  float: right;
+  padding: 6px;
+  margin-top: 4px;
+  border: none;
+  font-size: 17px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+}
+
+.nav-bar input[type=submit]:hover  {
+  background-color:#fafafa;
+  color:#207cca;
+}
+/***********Web Id for NavBar**************/
+#web-logo {
+  font-size: 50px;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  vertical-align: middle;
+  margin-left: -6vw;
+}
+
+#web-buttons {
+  margin-left: 30vw;
+  margin-right: -10vw;
+}
+/***********Content Set**************/
+.content-set {
+  padding-top: 50px;
+  color: white;
+  font-size: 30px;
+  background-color: black;
+  width: 100.05vw;
+  height: 370px;
+  margin-left: -.5vw;
+}
+
+.content-set h1 {
+  color: purple;
+  text-align: center;
+  padding-left: 24.5vw;
+}
+
+.content-set p {
+  margin-top: -2vw;
+  padding-left: 24.5vw;
+  text-align: center;
+  width: 50vw;
+}
+/***********Index Buttons**************/
+#index-buttons {
+  margin-top: 50px;
+  margin-left: 37vw;
+}
+
+#index-buttons input[type=button] {
+  box-sizing: border-box;
+  margin-right: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 30px;
+  position: relative;
+}
+
+#index-buttons input[type=button]:hover {
+    background-color: turquoise;
+}
+
+#index-buttons li{
+    list-style:none;
+    list-style-type:none;
+    display: list-item;
+}
+
+#index-buttons input[type=text] {
+  float: left;
+  padding: 6px;
+  margin-top: 4px;
+  margin-right: -8px;
+  border: none;
+  font-size: 17px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 40px;
+  width: 240px;
+}

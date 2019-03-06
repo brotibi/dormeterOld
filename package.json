@@ -1,0 +1,29 @@
+{
+  "name": "dormeter",
+  "version": "1.0.0",
+  "description": "A College Dorm Rating App and Social Network",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brotibi/dormeter.git"
+  },
+  "keywords": [
+    "dormeter",
+    "rotibi"
+  ],
+  "author": "Mobolaji Rotibi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brotibi/dormeter/issues"
+  },
+  "homepage": "https://github.com/brotibi/dormeter#readme"
+}
