@@ -1,1 +1,0 @@
-CREATE DATABASE dormeter CHARACTER SET utf8;

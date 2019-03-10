@@ -1,43 +1,54 @@
-<!DOCTYPE html>
-<html lang = "en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset = "utf-8">
-    <link rel = "stylesheet" type = "text/css" href = "assets/style.css">
-    <script src="script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Dormeter | Register</title>
-  </head>
-  <body>
-<!------------Navigation Bar---------------->
+<!---- Nav Bar -------->
 <% include partials/nav.ejs %>
-<!-------------Content------------------->
-    <div class = "content-set">
-      <table>
-        <tr>
-          <td>
-            <h1>Register Now!</h1>
-            <br/>
-            <p>Dormeter is a site dedicated to providing students
-              with information and reviews on prospective dorms, provided by
-              other students.A site made by students for students!</p>
-          </td>
-        </tr>
-      </table>
-    </div>
-<!------------Redirection--------------->
+<!--------------------->
+<div class = "form-layout">
+<h1> Register
+      </h1>
     <div id = "index-buttons">
-      <form>
+      <% include ./partials/messages %>
+      <form action="/users/register" method="POST">
         <ul>
-          <li><input type = "text" placeholder = "Name"></li>
-          <li><input type = "text" placeholder = "Last Name"></li>
-          <li><input type = "text" placeholder = "School Email"></li>
-          <li><input type = "text" placeholder = "Age"></li>
-          <li><input type = "text" placeholder = "University"></li>
-          <li><input type = "button" value = "Begin Searching"></li>
+          <li><label for="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          /></li>
+          <li><label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          /></li>
+          <li><label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Create Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>"
+          /></li>
+          <li><label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          /></li>
+        <li><button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button></li>
         </ul>
       </form>
-    </div>
-<!--------------------------------------->
-  </body>
-</html>
+      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+</div>
+</div>

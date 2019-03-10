@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset = "utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "assets/style.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Dormeter | Register</title>
+  </head>
+  <body>
+<!------------Navigation Bar---------------->
+<% include partials/nav.ejs %>
+<!-------------Content------------------->
+    <div class = "content-set">
+      <table>
+        <tr>
+          <td>
+            <h1>Register Now!</h1>
+            <br/>
+            <p>Dormeter is a site dedicated to providing students
+              with information and reviews on prospective dorms, provided by
+              other students.A site made by students for students!</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+<!------------Redirection--------------->
+    <div id = "index-buttons">
+      <form action = "/register" method = "post">
+        <ul>
+          <li><input type = "text" name = "username" placeholder = "Username"></li>
+          <li><input type = "text" name = "email" placeholder = "School Email(.edu)"></li>
+          <li><input type = "text" name = "university" placeholder = "University"></li>
+          <li><input type = "password" name = "password" placeholder = "Password"></li>
+          <li><input type = "password" name = "passwordConf" placeholder = "Password"></li>
+          <li><input type = "submit" value = "Begin Searching"></li>
+        </ul>
+      </form>
+    </div>
+<!--------------------------------------->
+  </body>
+</html>

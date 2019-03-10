@@ -1,54 +1,62 @@
-/*
-const http = require('http');
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
+const mongoose = require('mongoose');
+const passport = require('passport');
+const flash = require('connect-flash');
+const session = require('express-session');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const app = express();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-});
+// Passport Config
+require('./config/passport')(passport);
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-*/
-var express = require('express');
+// DB Config
+const db = require('./config/keys');
 
-var app = express();
-var bodyParser = require('body-parser');
+// Connect to MongoDB
+mongoose
+  .connect(
+    db,
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
+
+// EJS
+app.use(expressLayouts);
 app.set('view engine', 'ejs');
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
-// POST /login gets urlencoded bodies
-app.post('/login', urlencodedParser, function (req, res) {
-  if (!req.body) return res.sendStatus(400)
-  res.send('welcome, ' + req.body.username)
+// Express body parser
+app.use(express.urlencoded({ extended: true }));
+
+// Express session
+app.use(
+  session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Connect flash
+app.use(flash());
+
+// Global variables
+app.use(function(req, res, next) {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();
 });
 
-app.use('/assets', express.static('assets'));
+// Routes
+app.use('/', require('./routes/index.js'));
+app.use('/users', require('./routes/users.js'));
 
-app.get('/', function(req, res){
-  res.render('index');
-});
+const PORT = process.env.PORT || 5000;
 
-app.get('/home', function(req, res){
-  res.render('index');
-});
-
-app.get('/register', function(req, res){
-  res.render('register');
-});
-
-app.get('/profile', function(req, res){
-  res.render('profile');
-});
-
-app.get('/profile/:name', function(req, res) {
-  console.log(req.query);
-  res.render('profile',{username: req.params.name});
-});
-
-app.listen(3000);
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
