@@ -39,6 +39,10 @@ ul, li{
   margin-left: 20px;
 }
 
+.nav-bar a:hover{
+  text-shadow: 2px 2px gainsboro;
+}
+
 /****Home Page Buttons***/
 #redirection {
   margin-left: 20vw;
@@ -173,7 +177,7 @@ ul, li{
 }
 /***********Form Layout**************/
 .form-layout {
-  margin-top: 3.5vw;
+  margin-top: 60px;
   font-size: 17px;
   border-color: black;
 }
@@ -211,4 +215,16 @@ ul, li{
   padding: 6px;
   height: 40px;
   border: 5px;
+}
+
+/*******Dashboard Layout**********/
+.dashboard-layout {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.dashboard-layout h1{
+  color: purple;
+  font-size:50px;
+  text-shadow: 2px, 2px, black;
 }
