@@ -116,12 +116,13 @@ table {
 .content-set {
   text-align: center;
   padding-top: 50px;
+  margin-left: 25%;
   color: black;
   font-size: 30px;
   /*background-color: black;*/
   width: 100vw;
+  text-align: center;
   height: 370px;
-  margin-left: 8vw;
 }
 
 .content-set h1 {
