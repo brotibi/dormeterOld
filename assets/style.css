@@ -1,7 +1,7 @@
 body {
   background-color: gainsboro;
   color: black;
-  font-family: Tahoma, Geneva, sans-serif;
+ /* font-family: Tahoma, Geneva, sans-serif; */
 }
 
 table {
@@ -21,13 +21,13 @@ ul, li{
 .nav-bar {
   background-color: darkgrey;
   font-size: 25px;
-  box-shadow: 0px 1px black;
   width: 100vw;
   position: fixed;
-  margin-top: -10px;
-  margin-left: -8px;
+  margin-top: -16px;
+  margin-left: -17.5vw;
   text-decoration: none;
   height: 60px;
+  margin-bottom: 500px;
 }
 
 .nav-bar a {
@@ -43,7 +43,44 @@ ul, li{
   text-shadow: 2px 2px gainsboro;
 }
 
-/****Home Page Buttons***/
+.nav-bar input{
+  float: left;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-bar input[type=text] {
+  float: left;
+  margin-top: 4px;
+  border: none;
+  font-size: 17px;
+  box-sizing: border-box;
+ /* border-radius: 5px;*/
+  height: 30px;
+  width: 270px;
+}
+
+.nav-bar input[type=submit]  {
+  float: right;
+  margin-top: 4px;
+  border: none;
+  font-size: 17px;
+  box-sizing: border-box;
+  /*border-radius: 5px;*/
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+}
+
+.nav-bar input[type=submit]:hover  {
+  background-color:#fafafa;
+  color:#207cca;
+}
+
+
+/****Home Page Buttons***
 #redirection {
   margin-left: 20vw;
   font-size: 50px;
@@ -64,45 +101,8 @@ ul, li{
     display: list-item;
     float: center;
 }
-.nav-bar input{
-  float: left;
-  color: black;
-  text-align: left;
-  text-decoration: none;
-  font-size: 17px;
-}
 
-.nav-bar input[type=text] {
-  float: left;
-  padding: 6px;
-  margin-top: 4px;
-  margin-right: -8px;
-  border: none;
-  font-size: 17px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  height: 40px;
-  width: 270px;
-}
-
-.nav-bar input[type=submit]  {
-  float: right;
-  padding: 6px;
-  margin-top: 4px;
-  border: none;
-  font-size: 17px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  height: 40px;
-  display: inline-block;
-  position: absolute;
-}
-
-.nav-bar input[type=submit]:hover  {
-  background-color:#fafafa;
-  color:#207cca;
-}
-/***********Web Id for NavBar**************/
+/***********Web Id for NavBar**************
 #web-logo {
   font-size: 50px;
   padding-right: 5vw;
@@ -118,27 +118,26 @@ ul, li{
 /***********Content Set**************/
 .content-set {
   padding-top: 50px;
-  color: white;
+  color: black;
   font-size: 30px;
-  background-color: black;
-  width: 100.05vw;
+  /*background-color: black;*/
+  width: 100vw;
   height: 370px;
-  margin-left: -.5vw;
+  margin-left: 8vw;
 }
 
 .content-set h1 {
   color: purple;
   text-align: center;
-  padding-left: 24.5vw;
+
 }
 
 .content-set p {
   margin-top: -2vw;
-  padding-left: 24.5vw;
   text-align: center;
   width: 50vw;
 }
-/***********Index Buttons**************/
+/***********Index Buttons**************
 #index-buttons {
   margin-top: 50px;
   margin-left: 37vw;
@@ -176,12 +175,13 @@ ul, li{
   width: 240px;
 }
 /***********Form Layout**************/
+
 .form-layout {
   margin-top: 60px;
   font-size: 17px;
   border-color: black;
 }
-
+/*
 .form-layout input {
   float: left;
   padding: 6px;
@@ -227,4 +227,9 @@ ul, li{
   color: purple;
   font-size:50px;
   text-shadow: 2px, 2px, black;
+}
+
+/********Footer**************/
+footer{
+  text-align: center;
 }
