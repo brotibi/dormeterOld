@@ -8,35 +8,32 @@ table {
   visibility: visible;
 }
 
-ul, li{
+.nav-bar ul, li{
     list-style:none;
     list-style-type:none;
     display: inline-block;
-    margin-right: 10vw;
+    margin-right: 50px;
     vertical-align: middle;
-    margin-top: auto;
-    float: inherit;
 }
 /***********Navigation Bar**************/
 .nav-bar {
+  position: fixed;
   background-color: darkgrey;
   font-size: 25px;
   width: 100vw;
-  position: fixed;
-  margin-top: -16px;
-  margin-left: -17.5vw;
   text-decoration: none;
-  height: 60px;
-  margin-bottom: 500px;
+  height: 50px;
+  text-align: center;
+  margin-top: -16px;
 }
 
 .nav-bar a {
   text-decoration: none;
   text-shadow: 2px 2px black;
   color: purple;
-  text-align: center;
   white-space: nowrap;
   margin-left: 20px;
+  display: inline-block;
 }
 
 .nav-bar a:hover{
@@ -117,6 +114,7 @@ ul, li{
 }
 /***********Content Set**************/
 .content-set {
+  text-align: center;
   padding-top: 50px;
   color: black;
   font-size: 30px;
@@ -178,6 +176,10 @@ ul, li{
 
 .form-layout {
   margin-top: 60px;
+  margin-left: 30px;
+  width: 50%;
+  text-align: center;
+  display: inline;
   font-size: 17px;
   border-color: black;
 }
