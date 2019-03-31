@@ -1,14 +1,53 @@
-<div class = "nav-bar">
+<!----<nav class = "nav-bar">
   <ul>
       <li id = "web-logo"><a href = "/dashboard">dormeter</a></li>
-        <li>
-            <form>
-              <input type = "text" placeholder = "SEARCH FOR A DORM" required>
-              <input type = "submit" value = "Search">
-            </form>
-        </li>
       <li id = "web-buttons"><a href = "/dashboard">Dashboard</a>
+          <a href = "/users/review">Post a Review</a>
           <a href = "/users/logout">Logout</a></li>
   </ul>
-</div>
-<hr>
+  <li>
+    <form>
+      <input type = "text" placeholder = "Search for a Dorm!" required>
+      <input type = "submit" value = "Search">
+    </form>
+</li>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/dashboard">dormeter</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/dashboard"> <span class="sr-only">(current)</span></a>
+      </li> 
+
+      <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search for a Dorm" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+      <div class = "ml-5">
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+      </li>
+    </div>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Post
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/users/review">Review your Dorm</a>
+          <a class="dropdown-item" href="#">Message Someone</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Browse Reviews</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

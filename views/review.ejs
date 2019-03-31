@@ -1,0 +1,29 @@
+  <body>
+<!------------Navigation Bar---------------->
+<% include partials/usernav.ejs %>
+<!-------------Content------------------->
+    <div class = "content-set">
+      <table>
+        <tr>
+          <td>
+            <h1>Post a Review of your Dorm!</h1>
+            <br/>
+          </td>
+        </tr>
+      </table>
+    </div>
+<!------------Redirection--------------->
+      <form action = "/review" method = "post">
+        <ul class = "list-group">
+          <li class = "list-group-item"><input type = "text" name = "title" placeholder = "Title"></li>
+          <li class = "list-group-item"><input type = "text" name = "Dorm" placeholder = "School Email(.edu)"></li>
+          <li class = "list-group-item"><input type = "text" name = "university" placeholder = "University"></li>
+          <li class = "list-group-item"><textarea type = "password" name = "content" placeholder = "Password">
+            Write something about your dorm!
+          </textarea></li>
+          <!-----<li><input type = "password" name = "passwordConf" placeholder = "Password"></li> --->
+          <li class = "list-group-item"><input type = "submit" value = "Begin Searching"></li>
+        </ul>
+      </form>
+<!--------------------------------------->
+  </body>

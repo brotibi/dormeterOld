@@ -5,4 +5,11 @@
 <h1>Dashboard</h1>
 <p><h2>Welcome <%= user.name %></h2></p>
 <p><h2><%= user.university %></h2></p>
+<p><h2><%= user.description %></h2></p>
+<form id = "desc" action = "/desc" method = "post" >
+    <ul>
+        <li><textarea rows = "4" cols = "50" id = "newDesc" name = "newDesc"><%= user.description %></textarea></li>
+        <li><input type = "submit" value = "change"></li>
+    </ul>
+</form>
 </div>

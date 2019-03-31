@@ -22,7 +22,7 @@ const PostSchema = new mongoose.Schema({
     default: Date.now
   }
 },
-{collection: 'students'});
+{collection: 'posts'});
 
 const User = mongoose.model('User', UserSchema);
 

@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
-const UserSchema = new mongoose.Schema({
-  name: {
+const ReviewSchema = new mongoose.Schema({
+  title: {
     type: String,
     required: true
   },
-  email: {
+  user_id: {
     type: String,
     required: true
   },
-  password: {
+  content: {
     type: String,
     required: true
   },
@@ -17,16 +17,12 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  description: {
-    type: String,
-    default: "I am a student of Northeastern University"
-  },
   date: {
     type: Date,
     default: Date.now
   }
 },
-{collection: 'students'});
+{collection: 'reviews'});
 
 const User = mongoose.model('User', UserSchema);
 
