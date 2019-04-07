@@ -46,7 +46,7 @@ app.use(passport.session());
 app.use(flash());
 
 // Global variables
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
@@ -55,7 +55,10 @@ app.use(function(req, res, next) {
 
 // Routes
 app.use('/', require('./routes/index.js'));
-app.use('/users', require('./routes/users.js'));
+app.use('/posts', require('./routes/postsController.js'));
+app.use('/users', require('./routes/usersController.js'));
+app.use('/profile', require('./routes/profileController.js'));
+app.use('/search', require('./routes/searchController.js'));
 
 const PORT = process.env.PORT || 5000;
 

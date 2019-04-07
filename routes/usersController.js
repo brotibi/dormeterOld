@@ -37,7 +37,7 @@ router.post('/register', (req, res) => {
       password2
     });
   } else {
-    User.findOne({ email: email }).then(user => {
+    User.findOne({ email: email }, { name: name}).then(user => {
       if (user) {
         errors.push({ msg: 'Email already exists' });
         res.render('register', {
@@ -47,8 +47,9 @@ router.post('/register', (req, res) => {
           password,
           password2
         });
+        
       } else {
-        const newUser = new User({
+        const newUser = new User({ // Creates a new User JSON Document to be saved to the database
           name,
           email,
           password,

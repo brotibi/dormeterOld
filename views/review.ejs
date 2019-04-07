@@ -1,29 +1,28 @@
-  <body>
 <!------------Navigation Bar---------------->
-<% include partials/usernav.ejs %>
+<%- include partials/usernav.ejs %>
 <!-------------Content------------------->
-    <div class = "content-set">
-      <table>
-        <tr>
-          <td>
-            <h1>Post a Review of your Dorm!</h1>
-            <br/>
-          </td>
-        </tr>
-      </table>
-    </div>
+<h1>Post a Review of your Dorm!</h1>
 <!------------Redirection--------------->
-      <form action = "/review" method = "post">
-        <ul class = "list-group">
-          <li class = "list-group-item"><input type = "text" name = "title" placeholder = "Title"></li>
-          <li class = "list-group-item"><input type = "text" name = "Dorm" placeholder = "School Email(.edu)"></li>
-          <li class = "list-group-item"><input type = "text" name = "university" placeholder = "University"></li>
-          <li class = "list-group-item"><textarea type = "password" name = "content" placeholder = "Password">
-            Write something about your dorm!
-          </textarea></li>
-          <!-----<li><input type = "password" name = "passwordConf" placeholder = "Password"></li> --->
-          <li class = "list-group-item"><input type = "submit" value = "Begin Searching"></li>
-        </ul>
-      </form>
+<form action="/posts/review" method="post">
+  <div class="input-group mb-3">
+
+    <input class="form-control" type="text" name="title" placeholder="Title your Review">
+    <input class="form-control" type="text" name="dorm" placeholder="Whats the Name of this Dorm">
+    <div class="input-group-append">
+      <select class="custom-select" id="inputGroupSelect01" name="rating">
+        <option selected>Rating</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  </div>
+  <div class="input-group mb-3">
+
+    <textarea class="form-control" type="text" rows="20" cols="20" name="content"
+      placeholder="Type something"></textarea>
+  </div>
+  <button class="btn btn-outline-success my-2 my-sm-0 form-control" type="submit">Post Review</button>
+</form>
 <!--------------------------------------->
-  </body>

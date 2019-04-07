@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated } = require('../config/auth');
-var user = require('../models/user'); 
+var user = require('../models/user');
+var review = require('../models/review');
 
 
 router.use('/assets', express.static('assets'));
@@ -9,21 +10,33 @@ router.use('/assets', express.static('assets'));
 // Welcome Page
 router.get('/', (req, res) => res.render('welcome'));
 
+
+
 // Post a Review Page
-router.get('/users/review', ensureAuthenticated, (req, res) => res.render('review.ejs'));
+router.get('/review', ensureAuthenticated, (req, res) => res.render('reviews.js'));
+
 
 // Dashboard
-router.get('/dashboard', ensureAuthenticated, (req, res) =>
+router.get('/dashboard', ensureAuthenticated, (req, res) =>{
+  //posts = [];
+  userdata = req.user;
+review.find({user_id: req.user._id.toString()}, (req, postss)=>{
+
+  console.log(postss[0].title);
+
   res.render('dashboard', {
-    user: req.user
+    user: userdata,
+    posts: postss
   })
-);
+})
+
+});
 
 // Welcome Page
-router.post('/desc', ensureAuthenticated,(req, res) => user.updateOne({_id: req.session.passport.user}, {
-  $set: {description: req.body.newDesc} 
-},function(err, numberAffected, rawResponse) {
-  if(err) {
+router.post('/desc', ensureAuthenticated, (req, res) => user.updateOne({ _id: req.session.passport.user }, {
+  $set: { description: req.body.newDesc }
+}, function (err, numberAffected, rawResponse) {
+  if (err) {
     console.log('new profile update error');
   } else {
     // Dashboard

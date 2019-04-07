@@ -1,15 +1,30 @@
 const mongoose = require('mongoose');
+const express = require('express');
+const router = express.Router();
+const { ensureAuthenticated } = require('../config/auth');
+var user = require('../models/user');
 
 const ReviewSchema = new mongoose.Schema({
+  id: {
+    type: String
+  },
   title: {
     type: String,
     required: true
   },
-  user_id: {
+  content: {
     type: String,
     required: true
   },
-  content: {
+  dorm: { // Represents the name of the dorm
+    type: String,
+    required: true
+  },
+  rating: {
+    type: Number,
+    required: true
+  },
+  user_id: {
     type: String,
     required: true
   },
@@ -22,8 +37,8 @@ const ReviewSchema = new mongoose.Schema({
     default: Date.now
   }
 },
-{collection: 'reviews'});
+  { collection: 'reviews' });
 
-const User = mongoose.model('User', UserSchema);
+const Review = mongoose.model('Review', ReviewSchema);
 
-module.exports = User;
+module.exports = Review;

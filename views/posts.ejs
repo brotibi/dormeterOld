@@ -1,0 +1,20 @@
+<!------------Navigation Bar---------------->
+<% include partials/usernav.ejs %>
+<!------------Content----------------->
+<div class="dashboard-layout">
+    <h1><%= review.title %></h1>
+    <p>
+        <h2><%= review.university %></h2>
+    </p>
+    <p>
+        <h2><%= review.dorm %></h2>
+    </p>
+    <p>
+            <a href = '/profile/<%= user.name %>'><h4><%= user.name %></h4></a>
+        </p>
+    <p>
+        <%= review.content %>
+    </p>
+    <script>
+    </script>
+</div>
