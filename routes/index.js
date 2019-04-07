@@ -20,13 +20,10 @@ router.get('/review', ensureAuthenticated, (req, res) => res.render('reviews.js'
 router.get('/dashboard', ensureAuthenticated, (req, res) =>{
   //posts = [];
   userdata = req.user;
-review.find({user_id: req.user._id.toString()}, (req, postss)=>{
-
-  console.log(postss[0].title);
-
+review.find({user_id: req.user._id.toString()}, (req, posts)=>{
   res.render('dashboard', {
     user: userdata,
-    posts: postss
+    posts: posts
   })
 })
 
