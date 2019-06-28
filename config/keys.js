@@ -1,3 +1,3 @@
-db = 'mongodb+srv://boboli:Irr6ddVREq4SZmbA@cluster0-2gs89.azure.mongodb.net/test?retryWrites=true'
+db = 'mongodb+srv://username:serverName/test?retryWrites=true'
 
 module.exports = db;
