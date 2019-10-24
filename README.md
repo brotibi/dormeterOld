@@ -1,5 +1,5 @@
 # dormeter
-Dormeter Project
+A college dorm rating website.
 ## What is Dormeter?
 Dormeter originally started off as a project known as TheCollegeDorm, it was website that would be a place for college students to rate there dorms, and search for reviews of other dorms. Dormeter takes that idea, but instead of the site being written in PHP it now uses Node.js and Express.js. The development of Dormeter was a project I set out to teach myself Node and Express(I also used Bootstrap3 for the first time when working on this project). In addition to that it helped me learn more about databases, specifically the NoSQL database MongoDB.
 
