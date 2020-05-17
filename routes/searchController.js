@@ -25,7 +25,8 @@ router.post('/', (req, res) => {
                     res.render('search.ejs', {
             
                         posts: posts,
-                        students: users
+                        students: users,
+                        authenticated: ensureAuthenticated
                     })
                 }
             })

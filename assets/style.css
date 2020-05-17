@@ -229,5 +229,6 @@ table {
 
 /********Footer**************/
 footer{
+  position: relative;
   text-align: center;
 }
