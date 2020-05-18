@@ -4,12 +4,13 @@
 <div class="dashboard-layout">
     <h1>Search</h1>
     <p><ul>
-        <%  for(var i = 0; i < students.length; i++){ %>
+        <%  for(var i = 0; i < posts.length; i++){ %>
             <li><a href ='/posts/review/<%= posts[i]._id %>'><h4><%= posts[i].title %></h4></a>
                 <p><%= posts[i].university %></p>
-                <p><a href = '/profile/<%= students[i].name %>'><h5><%= students[i].name %></h5></a></p>
+               
+                <p><a href = '/profile/<%= names[i] %>'><h5><%= names[i] %></h5></a></p>
             </li>
-            <br/>
+            <hr/>
         <% } %>
     </ul></p>
 </div>

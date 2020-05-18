@@ -11,21 +11,23 @@ function escapeRegex(text) {
 // Search Bar
 router.post('/', (req, res) => {
     const searchInput = req.body.search;
-    Review.find({ title: new RegExp(escapeRegex(searchInput), 'gi') }, function(err, posts) {
+    Review.find({ title: new RegExp(escapeRegex(searchInput), 'gi') }, async function(err, posts) {
         console.log(posts);
         if(err || posts.length == 0){
-            res.redirect('/dashboard');
+            //res.redirect('/dashboard');
+            res.render('error.ejs')
         }else{
-        var users = [];
+        var users = await [];
         for (var i = 0; i < posts.length; i++) {
-            User.findById(posts[i].user_id, (err, userInfo) => {
-                users.push(userInfo);
+            await User.findById(posts[i].user_id, async (err, userInfo) => {
+                await users.push(userInfo.name);
+                console.log(users[i] + " " + userInfo.name)
                 //console.log(users);
                 if(users.length == posts.length){
                     res.render('search.ejs', {
             
                         posts: posts,
-                        students: users,
+                        names: await users,
                         authenticated: ensureAuthenticated
                     })
                 }
